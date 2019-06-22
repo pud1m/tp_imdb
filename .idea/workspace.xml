@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06521b59-778b-4a6f-bc42-9dd559b8e0c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/moviefetcher/cruzador.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviefetcher/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/moviefetcher/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviefetcher/cruzador.py" beforeDir="false" afterPath="$PROJECT_DIR$/moviefetcher/cruzador.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp_imdb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp_imdb/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,13 +23,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moviefetcher/cruzador.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+            <state relative-caret-position="136">
+              <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/moviefetcher/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -50,6 +64,8 @@
       <list>
         <option value="$PROJECT_DIR$/moviefetcher/models.py" />
         <option value="$PROJECT_DIR$/moviefetcher/cruzador.py" />
+        <option value="$PROJECT_DIR$/tp_imdb/settings.py" />
+        <option value="$PROJECT_DIR$/moviefetcher/admin.py" />
       </list>
     </option>
   </component>
@@ -86,6 +102,11 @@
               <item name="tp_imdb" type="462c0819:PsiDirectoryNode" />
               <item name="moviefetcher" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="tp_imdb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tp_imdb" type="462c0819:PsiDirectoryNode" />
+              <item name="tp_imdb" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -120,6 +141,14 @@
       <option name="presentableId" value="Default" />
       <updated>1561230627801</updated>
     </task>
+    <task id="LOCAL-00001" summary="Commit">
+      <created>1561238866658</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1561238866658</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -145,6 +174,10 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/moviefetcher/models.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -155,10 +188,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/moviefetcher/cruzador.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        <state relative-caret-position="136">
+          <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tp_imdb/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moviefetcher/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moviefetcher/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>

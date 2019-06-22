@@ -25,7 +25,7 @@ SECRET_KEY = '9usdqk=wa6)%pzwoe(y(i6fr186ztw!(q76*%jq6=o5+&dy!h9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'moviefetcher.apps.MoviefetcherConfig',
 ]
 
 MIDDLEWARE = [
