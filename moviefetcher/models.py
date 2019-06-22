@@ -10,4 +10,5 @@ class Filme(models.Model):
     gen2 = models.CharField(max_length=80, default='!')
     gen3 = models.CharField(max_length=80, default='!')
 
-
+    def __str__(self):
+        return self.movid

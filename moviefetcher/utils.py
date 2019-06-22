@@ -34,3 +34,20 @@ def get_delta(genero):
     }
 
     return retorno
+
+
+def get_generos():
+    print('criando lista de generos')
+    lista_generos = []
+
+    todos_filmes = Filme.objects.all()
+
+    for movie in todos_filmes:
+        if movie.gen1 != '!' and movie.gen1 not in lista_generos:
+            lista_generos.append(movie.gen1)
+        if movie.gen2 != '!' and movie.gen2 not in lista_generos:
+            lista_generos.append(movie.gen2)
+        if movie.gen3 != '!' and movie.gen3 not in lista_generos:
+            lista_generos.append(movie.gen3)
+    print('criada lista de generos')
+    return lista_generos
