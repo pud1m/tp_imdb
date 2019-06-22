@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from . import models
+from django.template import loader
 from .utils import *
 from datetime import datetime
 
@@ -46,10 +47,13 @@ def pedido(request):
         deltas.append(delta)
 
     # Cria o dict de retorno
-    retorno = {
+    contexto = {
         'total': len(Filme.objects.all()),
         'inicio': inicio,
         'fim': fim,
         'deltas': deltas
     }
 
+    # Retorno com os dados
+    template = loader.get_template('moviefetcher/resultado.html')
+    return HttpResponse(template.render(contexto, request))
