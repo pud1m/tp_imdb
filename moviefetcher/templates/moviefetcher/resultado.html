@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+</head>
+<body>
+{% for retorno in deltas %}
+
+<div><b>Gênero:</b> {{ retorno.genero }}</div><br>
+<div><b>Total de filmes consultados:</b> {{ retorno.total }}</div><br>
+<div><b>Média dos usuários:</b> {{ retorno.avg_usu }}</div><br>
+<div><b>Média dos Críticos:</b> {{ retorno.avg_meta }}</div><br>
+<div><b>Delta:</b> {{ retorno.delta }}</div><br><br><br>
+
+{% endfor %}
+</body>
+</html>
