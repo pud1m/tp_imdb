@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Filme(models.Model):
-    movid = models.CharField(max_length=80, default='!')
+    movid = models.CharField(max_length=240, default='!')
     nota_usu = models.SmallIntegerField(default=0)
     nota_meta = models.SmallIntegerField(default=0)
 

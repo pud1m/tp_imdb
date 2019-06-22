@@ -39,7 +39,36 @@ def pedido(request):
     url_final = ''.join((url1, periodo, avalia, url2))
 
     # Envia para o crawler
-    run_crawler(url_final)
+    lista_filmes = run_crawler(url_final)
+
+    # Cria os objetos filme
+    for mov in lista_filmes:
+        usunota = 10*float(mov['IMDB'])
+        generos = str(mov['Genre']).split(', ')
+        g1, g2, g3 = '!', '!', '!'
+
+        if len(generos) == 1:
+            g1 = generos[0]
+            g2 = '!'
+            g3 = '!'
+        else:
+            if len(generos) == 2:
+                g1 = generos[0]
+                g2 = generos[1]
+                g3 = '!'
+            else:
+                if len(generos) == 3:
+                    g1 = generos[0]
+                    g2 = generos[1]
+                    g3 = generos[2]
+
+        f = Filme(movid=str(mov['Title']),
+                  nota_usu=int(usunota),
+                  nota_meta=int(mov['Metascore']),
+                  gen1=g1,
+                  gen2=g2,
+                  gen3=g3)
+        f.save()
 
     # Cria lista de generos
     lista_generos = get_generos()
