@@ -12,6 +12,14 @@ def teste(request):
     return HttpResponse(str(x))
 
 
+def requester(request):
+    contexto = {
+        '0': 0,
+    }
+    template = loader.get_template('moviefetcher/requester.html')
+    return HttpResponse(template.render(contexto, request))
+
+
 def pedido(request):
     # Recebe o formulário com os parâmetros para a busca
     periodo_start = str(request.POST.get('periodo_start'))

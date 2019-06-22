@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Busca - IMDb</title>
+</head>
+<body>
+
+<form method="POST" action="{% url 'moviefetcher:pedido' %}">
+    {% csrf_token %}
+    <h1>Definir parâmetros para busca</h1>
+
+    <label for="periodo_start">Início do período: </label>
+    <input type="text" id="periodo_start" name="periodo_start" value="YYYY-MM-DD"/><br><br>
+
+    <label for="periodo_start">Fim do período: </label>
+    <input type="text" id="periodo_end" name="periodo_end" value="YYYY-MM-DD"/><br><br>
+
+    <label for="periodo_start">Mínimo de votos de usuários: </label>
+    <input type="number" id="avalia_min" name="avalia_min" value="0000"/><br><br>
+
+    <input type="submit" value="Enviar">
+
+</form>
+
+
+</body>
+</html>
