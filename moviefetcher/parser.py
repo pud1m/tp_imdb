@@ -1,30 +1,21 @@
 from html.parser import HTMLParser
 
-
 class Parser(HTMLParser):
-	movieList=[]
-	movieCount=-1;
-	actualMetascore="";
-	readingArticle=False;
-	readingTitle=False;
-	readingTitleData=False;
-	readingIMDB=False;
-	readingIMDBData=False;
-	readingMetascore=False;
-	readingMetascoreData=False;
-	readingGenre=False;
-
+	def __init__(self):
+		HTMLParser.__init__(self)
+		self.movieList=[]
+		self.actualTitle="";
+		self.actualGenre="";
+		self.actualIMDB="";
+		self.actualMetascore="";
+		self.readingTitle=False;
+		self.readingTitleData=False;
+		self.readingIMDB=False;
+		self.readingIMDBData=False;
+		self.readingMetascore=False;
+		self.readingMetascoreData=False;
+		self.readingGenre=False;
 	def handle_starttag(self, tag, attrs):
-		#================================ARTICLE==========================================
-		if tag=="div" and ("id","main") in attrs:
-			self.readingArticle=True;
-		if tag=="div" and ("id","sidebar") in attrs:
-			self.readingArticle=False;
-		#================================MOVIE============================================
-		if self.readingArticle and tag=="div" and ("class","lister-item mode-advanced") in attrs:
-			if self.movieCount==-1 or self.movieList[self.movieCount]["Metascore"]!="":
-				self.movieList.append({"Title":"","Genre":"","IMDB":"","Metascore":""})
-				self.movieCount+=1;
 		#================================READ-TITLE========================================
 		if tag=="h3" and ("class","lister-item-header") in attrs:
 			self.readingTitle=True;
@@ -43,30 +34,30 @@ class Parser(HTMLParser):
 		#================================READ-GENRE=========================================
 		if tag=="span" and ("class","genre") in attrs:
 			self.readingGenre=True;
-
 	def handle_data(self, data):
-		#================================READ-IMDB=========================================
+		 #================================READ-IMDB=========================================
 		if self.readingIMDBData:
 			#print("IMDB Rating: ", data)
-			self.movieList[self.movieCount]['IMDB']=data.strip();
+			self.actualIMDB=data.strip();
 			self.readingIMDBData=False;
 			self.readingIMDB=False;
 		#================================READ-TITLE========================================
 		if self.readingTitleData:
 			#print("Title: ",data)
-			self.movieList[self.movieCount]['Title']=data.strip();
+			self.actualTitle=data.strip();
 			self.readingTitleData=False;
 			self.readingTitle=False;
 		#================================READ-METASCORE====================================
 		if self.readingMetascoreData:
 			#print("Metascore: ",data)
-			self.movieList[self.movieCount]['Metascore']=data.strip();
+			self.actualMetascore=data.strip();
 			self.readingMetascoreData=False;
 			self.readingMetascore=False;
+			self.movieList.append({"Title":self.actualTitle,"Genre":self.actualGenre,"IMDB":self.actualIMDB,"Metascore":self.actualMetascore})
 		#================================READ-GENRE========================================
 		if self.readingGenre:
 			#print("Genre: ",data.strip().replace('\n',''))
-			self.movieList[self.movieCount]['Genre']=data.strip().replace('\n','')
+			self.actualGenre=data.strip().replace('\n','')
 			self.readingGenre=False;
 
 	def getMovieList(self):

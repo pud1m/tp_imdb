@@ -4,6 +4,7 @@ from . import models
 from django.template import loader
 from .utils import *
 from datetime import datetime
+from .crawler_main import getMovies
 
 
 def teste(request):
@@ -39,7 +40,7 @@ def pedido(request):
     url_final = ''.join((url1, periodo, avalia, url2))
 
     # Envia para o crawler
-    lista_filmes = run_crawler(url_final)
+    lista_filmes = getMovies(url_final)
 
     # Cria os objetos filme
     for mov in lista_filmes:
