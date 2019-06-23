@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06521b59-778b-4a6f-bc42-9dd559b8e0c1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/db - bkp.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db - init.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviefetcher/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/moviefetcher/parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviefetcher/crawler_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/moviefetcher/crawler_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviefetcher/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/moviefetcher/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moviefetcher/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/moviefetcher/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moviefetcher/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="42" column="39" lean-forward="true" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+            <state relative-caret-position="272">
+              <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -48,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/moviefetcher/crawler_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+            <state relative-caret-position="709">
+              <caret line="43" column="16" lean-forward="true" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -69,8 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moviefetcher/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="7" column="49" lean-forward="true" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+            <state relative-caret-position="136">
+              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -81,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moviefetcher/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="28" selection-start-line="28" selection-end-line="32" selection-end-column="22" />
+            <state relative-caret-position="731">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -100,6 +103,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>objec</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -110,13 +118,13 @@
         <option value="$PROJECT_DIR$/tp_imdb/settings.py" />
         <option value="$PROJECT_DIR$/moviefetcher/admin.py" />
         <option value="$PROJECT_DIR$/tp_imdb/urls.py" />
-        <option value="$PROJECT_DIR$/moviefetcher/utils.py" />
         <option value="$PROJECT_DIR$/moviefetcher/urls.py" />
         <option value="$PROJECT_DIR$/moviefetcher/templates/moviefetcher/requester.html" />
         <option value="$PROJECT_DIR$/moviefetcher/parser.py" />
         <option value="$PROJECT_DIR$/moviefetcher/models.py" />
         <option value="$PROJECT_DIR$/moviefetcher/templates/moviefetcher/resultado.html" />
         <option value="$PROJECT_DIR$/moviefetcher/crawler_main.py" />
+        <option value="$PROJECT_DIR$/moviefetcher/utils.py" />
         <option value="$PROJECT_DIR$/moviefetcher/views.py" />
       </list>
     </option>
@@ -246,7 +254,21 @@
       <option name="project" value="LOCAL" />
       <updated>1561247650336</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Commit">
+      <created>1561250783006</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1561250783007</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Commit">
+      <created>1561250791230</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1561250791230</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -334,10 +356,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/moviefetcher/templates/moviefetcher/resultado.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/moviefetcher/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="49" lean-forward="true" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+        <state relative-caret-position="136">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
@@ -346,25 +375,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/moviefetcher/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="28" selection-start-line="28" selection-end-line="32" selection-end-column="22" />
+        <state relative-caret-position="731">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/moviefetcher/templates/moviefetcher/resultado.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/moviefetcher/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="42" column="39" lean-forward="true" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+        <state relative-caret-position="272">
+          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
@@ -373,8 +395,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/moviefetcher/crawler_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+        <state relative-caret-position="709">
+          <caret line="43" column="16" lean-forward="true" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

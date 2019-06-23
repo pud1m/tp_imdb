@@ -2,11 +2,13 @@ from .models import Filme
 from django.db.models import Q
 
 
-def get_delta(genero):
+def get_delta(genero, lista_total):
 
-    lista_filmes = Filme.objects.filter(
-        Q(gen1=genero) | Q(gen2=genero) | Q(gen3=genero)
-    ).exclude(nota_usu=0, nota_meta=0)
+    lista_filmes = []
+
+    for mov in lista_total:
+        if mov.gen1 == genero or mov.gen2 == genero or mov.gen3 == genero:
+            lista_filmes.append(mov)
 
     usu_total = 0
     meta_total = 0
@@ -36,11 +38,11 @@ def get_delta(genero):
     return retorno
 
 
-def get_generos():
+def get_generos(lista_total):
     print('criando lista de generos')
     lista_generos = []
 
-    todos_filmes = Filme.objects.all()
+    todos_filmes = lista_total
 
     for movie in todos_filmes:
         if movie.gen1 != '!' and movie.gen1 not in lista_generos:
@@ -51,3 +53,13 @@ def get_generos():
             lista_generos.append(movie.gen3)
     print('criada lista de generos')
     return lista_generos
+
+
+class Movie:
+    def __init__(self, movid, nota_usu, nota_meta, gen1, gen2, gen3):
+        self.movid = movid
+        self.nota_usu = nota_usu
+        self.nota_meta = nota_meta
+        self.gen1 = gen1
+        self.gen2 = gen2
+        self.gen3 = gen3

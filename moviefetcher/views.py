@@ -43,6 +43,7 @@ def pedido(request):
     lista_filmes = getMovies(url_final)
 
     # Cria os objetos filme
+    lista_total = []
     for mov in lista_filmes:
         usunota = 10*float(mov['IMDB'])
         generos = str(mov['Genre']).split(', ')
@@ -63,16 +64,18 @@ def pedido(request):
                     g2 = generos[1]
                     g3 = generos[2]
 
-        f = Filme(movid=str(mov['Title']),
-                  nota_usu=int(usunota),
-                  nota_meta=int(mov['Metascore']),
-                  gen1=g1,
-                  gen2=g2,
-                  gen3=g3)
-        f.save()
+        f = Movie(
+            str(mov['Title']),
+            nota_usu=int(usunota),
+            nota_meta=int(mov['Metascore']),
+            gen1=g1,
+            gen2=g2,
+            gen3=g3
+        )
+        lista_total.append(f)
 
     # Cria lista de generos
-    lista_generos = get_generos()
+    lista_generos = get_generos(lista_total)
 
     # Converte a data enviada para texto amigável
     inicio = datetime.strptime(periodo_start, '%Y-%m-%d').strftime('%d de %B de %Y')
@@ -81,12 +84,12 @@ def pedido(request):
     # Loop pela lista de gêneros, atribuindo delta para cada gênero
     deltas = []
     for genero in lista_generos:
-        delta = get_delta(str(genero))
+        delta = get_delta(str(genero), lista_total)
         deltas.append(delta)
 
     # Cria o dict de retorno
     contexto = {
-        'total': len(Filme.objects.all()),
+        'total': len(lista_total),
         'inicio': inicio,
         'fim': fim,
         'deltas': deltas
